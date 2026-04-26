@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>TailFlow - Visual Log Parser</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./assets/TailFlow.png" type="image/png">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">📊 TailFlow</div>
+      <div class="tabs">
+        <div class="tab active" data-mode="file">📁 Upload File</div>
+        <div class="tab" data-mode="paste">📋 Paste Text</div>
+      </div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
+        <button class="btn btn-sec" id="historyBtn">📜 History</button>
+        <button class="btn btn-sec" id="compareBtn" disabled>⚖️ Compare</button>
+      </div>
+    </div>
+
+    <div class="settings-bar">
+      <label>🌍 Timezone:</label>
+      <select id="tzSelect">
+        <option value="Local">Local (Browser)</option>
+        <option value="UTC">UTC</option>
+      </select>
+      <label style="margin-left:12px">⏱️ Format:</label>
+      <button id="formatToggle">24h</button>
+      <button id="themeToggle" style="margin-left:auto">🌓 Theme</button>
+    </div>
+
+    <div id="fileZone" class="drop-zone">
+      <h2>Drop your log file here</h2>
+      <p>or click to browse (.log, .txt files)</p>
+      <input type="file" id="fileInput" class="hidden" accept=".log,.txt">
+    </div>
+
+    <div id="pasteZone" class="paste-area hidden">
+      <h2>Paste your logs</h2>
+      <textarea id="pasteInput" placeholder="Paste log content here... (up to 10 MB recommended)"></textarea>
+      <button class="btn" id="parsePasteBtn" style="margin-top:14px">Analyze Logs</button>
+    </div>
+
+    <div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+    <div class="status" id="status">Ready to analyze logs</div>
+
+    <div class="controls hidden" id="controls">
+      <input type="text" id="filterInput" placeholder="🔍 Filter by pattern: 500, ERROR, &lt;IP&gt;...">
+      <button class="btn" id="exportBtn">⬇️ Export JSON</button>
+    </div>
+
+    <div class="stats hidden" id="statsPanel">
+      <div class="stat"><div class="val" id="totalLines">0</div><div class="label">Total Lines</div></div>
+      <div class="stat"><div class="val" id="format">—</div><div class="label">Format</div></div>
+      <div class="stat"><div class="val" id="timeRange">—</div><div class="label">Time Range</div></div>
+      <div class="stat"><div class="val" id="uniqueGroups">0</div><div class="label">Unique Patterns</div></div>
+    </div>
+
+    <div class="chart-wrap hidden" id="chartWrap">
+      <h3>📈 Events Timeline</h3>
+      <canvas id="chart"></canvas>
+      <div class="chart-tooltip" id="chartTooltip">
+        <span class="tt-time"></span>
+        <span class="tt-val"></span>
+      </div>
+    </div>
+
+    <div id="groupsContainer" class="groups hidden"></div>
+  </div>
+
+  <div class="history-panel" id="historyPanel">
+    <h3>📜 Recent Analyses</h3>
+    <div id="historyList"></div>
+    <button class="btn btn-sec" id="clearHistoryBtn" style="width:100%;margin-top:10px">Clear History</button>
+  </div>
+
+  <div class="modal" id="detailModal">
+    <div class="modal-box">
+      <h2>
+        <span id="detailTitle">Bucket Details</span>
+        <button class="btn btn-sec" id="closeDetailBtn" style="padding:4px 10px;font-size:11px">Close</button>
+      </h2>
+      <div id="detailContent"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="compareModal">
+    <div class="modal-box">
+      <h2>⚖️ Compare with Previous File</h2>
+      <div id="compareContent"></div>
+      <button class="btn btn-sec" id="closeCompareBtn" style="margin-top:14px;width:100%">Close</button>
+    </div>
+  </div>
+
+  <script src="./js/script.js" defer></script>
+</body>
+</html>
