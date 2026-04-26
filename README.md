@@ -26,7 +26,7 @@
 ## 🚀 Try It Live
 
 The app is deployed on **GitHub Pages**.  
-👉 **[TailFlow](https://capwan.github.io/TailFlow/)** 
+- **[TailFlow](https://capwan.github.io/TailFlow/)** 
 
 No cloning, no dependencies — just open the link and start analyzing logs.
 
