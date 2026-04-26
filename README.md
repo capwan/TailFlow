@@ -11,7 +11,7 @@
 - 🔍 **Auto-detection of log formats** — Asterisk, syslog, nginx/apache, and generic formats.
 - 🧠 **Smart grouping** — normalization of IPs, UUIDs, numbers, query parameters to extract unique patterns.
 - 📈 **Interactive histogram** — minute-level event distribution with tooltips; click a bar to see raw log samples.
-- 🪣 **Drill-down details** — up to 15 raw log lines displayed per bucket.
+- 🔎 **Drill-down details** — up to 15 raw log lines displayed per bucket.
 - ✂️ **Click‑to‑copy** — click any raw log line in the detail modal to copy it to the clipboard.
 - ⚖️ **Compare two analyses** — diff between the current and previous import, highlighting added/removed patterns.
 - 📂 **File upload or paste** — drag & drop `.log`/`.txt` files or paste text (up to ~10 MB).
