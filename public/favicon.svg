@@ -1,0 +1,28 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" rx="100" fill="#0f1117"/>
+
+  <!-- Histogram bars, bottom-anchored at y=430 -->
+  <rect x="44"  y="290" width="66" height="140" rx="10" fill="#1d4ed8" opacity="0.9"/>
+  <rect x="132" y="148" width="66" height="282" rx="10" fill="#2563eb"/>
+  <rect x="220" y="198" width="66" height="232" rx="10" fill="#1d4ed8" opacity="0.9"/>
+  <rect x="308" y="248" width="66" height="182" rx="10" fill="#2563eb"/>
+  <rect x="396" y="308" width="66" height="122" rx="10" fill="#1d4ed8" opacity="0.9"/>
+
+  <!-- Connecting trend line -->
+  <polyline
+    points="77,278 165,136 253,186 341,236 429,296"
+    stroke="#22d3ee"
+    stroke-width="20"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+
+  <!-- Dots at peaks -->
+  <circle cx="77"  cy="278" r="14" fill="#22d3ee"/>
+  <circle cx="165" cy="136" r="14" fill="#22d3ee"/>
+  <circle cx="253" cy="186" r="14" fill="#22d3ee"/>
+  <circle cx="341" cy="236" r="14" fill="#22d3ee"/>
+  <circle cx="429" cy="296" r="14" fill="#22d3ee"/>
+</svg>
