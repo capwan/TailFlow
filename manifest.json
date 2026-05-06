@@ -1,0 +1,26 @@
+{
+  "name": "TailFlow - Visual Log Parser",
+  "short_name": "TailFlow",
+  "description": "Analyze, group and explore log files directly in the browser. No server, no database, no registration.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f1117",
+  "theme_color": "#3b82f6",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["developer", "utilities", "productivity"],
+  "screenshots": []
+}
